@@ -171,7 +171,7 @@ pub fn poll<const N: usize>(
                         .map(|pos| pos.load(Ordering::SeqCst))
                         .collect();
                     format!(
-                        "{{ [{}] [{}] {:.?} }}",
+                        "{{ [{}] [{}] {:?} }}",
                         recent_execution_times.join(", "),
                         average_execution_times.join(", "),
                         execution_positions
@@ -277,7 +277,7 @@ pub fn poll<const N: usize>(
                     .map(|pos| pos.load(Ordering::SeqCst))
                     .collect();
                 format!(
-                    "{{ [{}] [{}] {:.?} }}",
+                    "{{ [{}] [{}] {:?} }}",
                     recent_execution_times.join(", "),
                     average_execution_times.join(", "),
                     execution_positions
